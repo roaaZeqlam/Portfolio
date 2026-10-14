@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Roaa Zeqlam | Automation Business Analyst</title>
+<meta name="description" content="Portfolio of Roaa Zeqlam, Automation Business Analyst at Jo Academy in Amman, Jordan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/x-icon" href="icon.jpeg">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#f6ebd3;
+  --wine:#ecdcb8;
+  --burgundy:#5a1226;
+  --burgundy-bright:#8c2239;
+  --champagne:#3b0b17;
+  --champagne-dim:#7a4452;
+  --head:#6a1428;
+  --line:rgba(77,15,32,.25);
+  --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,"Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;background:var(--ink)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--champagne);font-family:var(--sans);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.dark{--ink:#4d0f20;--champagne:#f4e4c1;--champagne-dim:#dcc79d;--head:#f4e4c1;--line:rgba(244,228,193,.3);background:var(--ink);color:var(--champagne)}
+.dark.deep{--ink:#34091a}
+h1,h2,h3{color:var(--head)}
+:focus-visible{outline:2px solid var(--champagne);outline-offset:4px;border-radius:2px}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:1.08;letter-spacing:-.01em}
+p{margin:0}
+
+/* header */
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-top:28px;padding-bottom:28px}
+.mark{font-family:var(--serif);font-size:1.25rem;text-decoration:none;font-style:italic}
+nav{display:flex;gap:clamp(14px,3vw,32px);flex-wrap:wrap;justify-content:flex-end}
+nav a{text-decoration:none;color:var(--champagne-dim);font-size:.95rem;padding:10px 0;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+nav a:hover{color:var(--champagne);border-color:var(--champagne)}
+
+.skip{position:absolute;left:16px;top:-60px;z-index:100;padding:10px 16px;background:var(--champagne);color:var(--ink);text-decoration:none;font-weight:500}
+.skip:focus{top:16px}
+
+/* hero */
+.hero{padding-top:clamp(32px,6vw,72px);padding-bottom:clamp(64px,9vw,120px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,88px);align-items:center}
+.eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--champagne-dim);margin-bottom:20px;display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:36px;height:1px;background:var(--champagne-dim)}
+.hero h1{font-size:clamp(3.1rem,8.2vw,7.5rem);font-weight:400;letter-spacing:-.03em;line-height:.95}
+.portrait{position:relative;margin:0;width:100%;max-width:400px;aspect-ratio:1;justify-self:end;animation:fade 1.1s .2s both}
+.portrait::before{content:"";position:absolute;inset:-16px;border:1px solid var(--line);border-radius:50%;pointer-events:none}
+.portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%;border-radius:50%;border:6px solid var(--burgundy-bright);background:var(--burgundy);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.hero h1 span{display:block;animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+.hero h1 span+span{animation-delay:.12s;font-style:italic;padding-left:.6em}
+.role{margin-top:clamp(28px,4vw,44px);font-size:clamp(1.15rem,2.2vw,1.45rem);max-width:34ch;font-family:var(--serif);line-height:1.35}
+.role small{display:block;margin-top:10px;font-family:var(--sans);font-size:.95rem;color:var(--champagne-dim)}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:12px 28px;border:1px solid var(--champagne);text-decoration:none;font-weight:500;font-size:.98rem;transition:background .2s,color .2s}
+.btn.solid{background:var(--champagne);color:var(--ink)}
+.btn.solid:hover{background:transparent;color:var(--champagne)}
+.btn.ghost:hover{background:var(--champagne);color:var(--ink)}
+
+.flow-intro{margin-top:clamp(64px,9vw,104px);font-size:.95rem;color:var(--champagne-dim)}
+.flow{position:relative;display:grid;grid-template-columns:repeat(5,1fr);list-style:none;margin:28px 0 0;padding:0}
+.flow::before{content:"";position:absolute;left:11px;right:20%;top:11px;height:1px;background:var(--champagne);transform-origin:left;animation:drawx 1.8s .5s cubic-bezier(.6,0,.2,1) both}
+.flow li{position:relative;padding:44px 20px 0 0;animation:fade .7s both}
+.flow li:nth-child(1){animation-delay:.5s}.flow li:nth-child(2){animation-delay:.95s}.flow li:nth-child(3){animation-delay:1.4s}.flow li:nth-child(4){animation-delay:1.85s}.flow li:nth-child(5){animation-delay:2.3s}
+.flow li::before{content:"";position:absolute;top:0;left:0;width:23px;height:23px;border-radius:50%;background:var(--burgundy-bright);border:1px solid var(--champagne);box-shadow:0 0 0 5px var(--ink)}
+.flow h3{font-size:1.2rem;margin-bottom:8px}
+.flow p{font-size:.93rem;line-height:1.55;color:var(--champagne-dim)}
+
+/* sections */
+section{padding:clamp(64px,9vw,112px) 0;border-top:1px solid var(--line)}
+section.dark{border-top:0}
+.split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
+section h2{font-size:clamp(2rem,4.4vw,3.25rem)}
+.split>h2{position:sticky;top:32px;align-self:start}
+.section-title{margin-bottom:clamp(36px,5vw,56px)}
+.lead{font-family:var(--serif);font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.4;max-width:34ch;margin-bottom:28px}
+.prose p+p{margin-top:1.1em}
+.prose p{max-width:62ch;color:var(--champagne)}
+.facts{margin:36px 0 0;display:grid;grid-template-columns:auto 1fr;gap:10px 28px;font-size:.98rem}
+.facts dt{color:var(--champagne-dim)}
+.facts dd{margin:0}
+
+/* timeline */
+.role-list{list-style:none;margin:0;padding:0}
+.role-list>li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);padding:36px 0;border-top:1px solid var(--line)}
+.role-list>li:first-child{border-top:0;padding-top:0}
+.when{color:var(--champagne-dim);font-size:.95rem;margin-top:6px}
+.role-list h3{font-size:clamp(1.4rem,2.6vw,1.9rem);margin-bottom:4px}
+.org{color:var(--champagne);font-weight:500}
+.role-list ul{margin:0;padding:0;list-style:none}
+.role-list ul li{position:relative;padding-left:22px;margin-bottom:8px;max-width:60ch}
+.role-list ul li::before{content:"";position:absolute;left:0;top:.72em;width:10px;height:1px;background:var(--champagne)}
+.now{display:inline-block;margin-left:10px;padding:2px 10px;border:1px solid var(--burgundy-bright);background:var(--burgundy);font-family:var(--sans);font-size:.78rem;letter-spacing:.02em;vertical-align:middle;color:#f4e4c1}
+
+/* toolkit */
+.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,56px);margin-top:48px}
+.tier{border-top:1px solid var(--champagne);padding-top:20px}
+.tier h3{font-size:1.35rem;margin-bottom:6px}
+.tier .note{font-size:.92rem;color:var(--champagne-dim);margin-bottom:20px}
+.tier ul{list-style:none;margin:0;padding:0}
+.tier li{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.25;padding:6px 0}
+.tier.big li{font-size:clamp(1.9rem,3.4vw,2.6rem)}
+.practice{margin-top:56px;max-width:70ch;color:var(--champagne-dim)}
+.practice strong{color:var(--champagne);font-weight:500}
+
+/* credentials */
+.creds{list-style:none;margin:0;padding:0}
+.creds li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;padding:20px 0;border-bottom:1px solid var(--line)}
+.creds li:first-child{padding-top:0}
+.creds .t{font-family:var(--serif);font-size:1.25rem;line-height:1.3}
+.creds .s{color:var(--champagne-dim);font-size:.93rem;text-align:right;white-space:nowrap}
+.creds .d{grid-column:1/-1;color:var(--champagne-dim);font-size:.93rem}
+.edu{margin-top:48px}
+.edu h3{font-size:1.35rem;margin-bottom:10px}
+
+/* contact */
+.contact{border-top:0}
+.contact h2{font-size:clamp(2.4rem,7vw,5.5rem);letter-spacing:-.02em;max-width:14ch}
+.mail{display:inline-block;margin-top:40px;font-family:var(--serif);font-size:clamp(1.3rem,3.6vw,2.4rem);text-decoration:none;border-bottom:1px solid var(--champagne);padding-bottom:4px;word-break:break-all}
+.mail:hover{color:#fff;border-color:#fff}
+.reach{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:36px;font-size:1rem}
+.reach a{text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
+.reach a:hover{border-color:var(--champagne)}
+footer{padding:0 0 40px;font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;border-top:1px solid var(--line);padding-top:24px;color:var(--champagne-dim)}
+footer a{text-decoration:none;border-bottom:1px solid var(--line)}
+footer a:hover{color:var(--champagne);border-color:var(--champagne)}
+
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes drawx{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes drawy{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+
+@media (max-width:860px){
+  .split,.role-list>li{grid-template-columns:1fr}
+  .split>h2{position:static}
+  .hero-grid{grid-template-columns:1fr}
+  .portrait{justify-self:start;max-width:280px;margin:16px}
+  .tiers{grid-template-columns:1fr}
+  .role-list>li{gap:12px}
+  .when{margin-top:0}
+}
+@media (max-width:760px){
+  .flow{grid-template-columns:1fr}
+  .flow::before{left:11px;right:auto;top:11px;bottom:60px;width:1px;height:auto;transform-origin:top;animation-name:drawy}
+  .flow li{padding:0 0 28px 48px}
+  .creds li{grid-template-columns:1fr}
+  .creds .s{text-align:left;white-space:normal}
+  nav{gap:4px 18px}
+  .hero h1 span+span{padding-left:.3em}
+}
+@media (max-width:600px){
+  header .wrap{flex-direction:column;align-items:flex-start;gap:8px;padding-bottom:12px}
+  nav{justify-content:flex-start;width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#about">Skip to content</a>
+
+<div class="dark" id="top">
+<header>
+  <div class="wrap">
+    <a class="mark" href="#top">Roaa Zeqlam</a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#toolkit">Toolkit</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Portfolio</p>
+        <h1><span>Roaa</span><span>Zeqlam</span></h1>
+        <p class="role">Automation Business Analyst at Jo Academy.<small>Amman, Jordan</small></p>
+        <div class="cta">
+          <a class="btn solid" href="mailto:zeqlamroaa@gmail.com">Email me</a>
+          <a class="btn ghost" href="https://linkedin.com/in/roaa-zeqlam-651844217" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <figure class="portrait">
+        <img src="me-circle.jpeg" alt="Portrait of Roaa Zeqlam" width="800" height="800" fetchpriority="high" decoding="async">
+      </figure>
+    </div>
+
+    <p class="flow-intro">How a process becomes an automation, the way I work it:</p>
+    <ol class="flow">
+      <li><h3>Analyze processes</h3><p>Map how work really happens and spot what can be automated.</p></li>
+      <li><h3>Gather requirements</h3><p>Turn what teams need into clear, buildable requirements.</p></li>
+      <li><h3>Document workflows</h3><p>Write each flow down so it can be built, tested and handed over.</p></li>
+      <li><h3>Test with teams</h3><p>Try automations with the people who use them and report issues.</p></li>
+      <li><h3>Monitor and improve</h3><p>Track performance and collect user feedback after launch.</p></li>
+    </ol>
+  </div>
+</div>
+
+<main>
+  <section id="about">
+    <div class="wrap split">
+      <h2>About</h2>
+      <div class="prose">
+        <p class="lead">I started in HR operations, moved into automation, and now help turn everyday processes into workflows that run themselves.</p>
+        <p>I graduated in Business Information Technology from Princess Sumaya University for Technology in 2024. At Jo Academy I began in HR operations, joined the Automation Department as an intern, and became an Automation Business Analyst in October 2025.</p>
+        <p>Having worked on the operations side first, I know what a process feels like for the people who run it every day. That shapes the questions I ask when I gather requirements and the way I document the result.</p>
+        <dl class="facts">
+          <dt>Role</dt><dd>Automation Business Analyst</dd>
+          <dt>Company</dt><dd>Jo Academy</dd>
+          <dt>Based in</dt><dd>Amman, Jordan</dd>
+          <dt>Languages</dt><dd>Arabic (native), English (very good)</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2 class="section-title">Experience</h2>
+      <ol class="role-list">
+        <li>
+          <div><h3>Automation Business Analyst<span class="now">Current</span></h3><p class="org">Jo Academy</p><p class="when">October 2025 to present</p></div>
+          <ul>
+            <li>Analyze internal processes and identify automation opportunities.</li>
+            <li>Gather business requirements and coordinate with technical teams.</li>
+            <li>Support implementation and testing of automation solutions.</li>
+            <li>Document workflows and improve operational efficiency.</li>
+            <li>Monitor system performance and collect user feedback.</li>
+          </ul>
+        </li>
+        <li>
+          <div><h3>Automation Intern</h3><p class="org">Jo Academy</p><p class="when">July 2025 to October 2025</p></div>
+          <ul>
+            <li>Assisted in analyzing business processes for automation.</li>
+            <li>Documented workflows and system requirements.</li>
+            <li>Tested automation tools and reported issues.</li>
+            <li>Worked with cross-functional teams to understand operational needs.</li>
+          </ul>
+        </li>
+        <li>
+          <div><h3>HR Operations</h3><p class="org">Jo Academy</p><p class="when">February 2025 to June 2025</p></div>
+          <ul>
+            <li>Supported onboarding and employee records management.</li>
+            <li>Handled data entry and internal HR documentation.</li>
+            <li>Assisted with recruitment coordination and HR processes.</li>
+            <li>Helped improve administrative workflows.</li>
+          </ul>
+        </li>
+        <li>
+          <div><h3>Intern</h3><p class="org">Bank Al Ittihad</p><p class="when">Two-month training</p></div>
+          <ul>
+            <li>Trained in customer service and transaction processing.</li>
+            <li>Gained exposure to banking systems and digital financial services.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="toolkit" class="dark">
+    <div class="wrap">
+      <h2>Toolkit</h2>
+      <div class="tiers">
+        <div class="tier big">
+          <h3>Professional</h3>
+          <p class="note">What I use confidently, day to day.</p>
+          <ul><li>Excel</li><li>Bitrix24</li></ul>
+        </div>
+        <div class="tier">
+          <h3>Working knowledge</h3>
+          <p class="note">Tools I build and design with.</p>
+          <ul><li>n8n</li><li>Python</li><li>SQL</li><li>Power BI</li><li>Canva</li><li>Figma</li></ul>
+        </div>
+        <div class="tier">
+          <h3>Building foundations</h3>
+          <p class="note">Learning and growing.</p>
+          <ul><li>Oracle Database 11g</li><li>UiPath agentic automation</li></ul>
+        </div>
+      </div>
+      <p class="practice"><strong>Practice:</strong> business process analysis, requirements gathering, process and workflow documentation, and automation support. Soft skills: leadership, problem-solving, communication, adaptability, teamwork and time management.</p>
+    </div>
+  </section>
+
+  <section id="credentials">
+    <div class="wrap split">
+      <h2>Credentials</h2>
+      <div>
+        <ul class="creds">
+          <li><span class="t">Agentic Automation Training learning plan</span><span class="s">UiPath</span></li>
+          <li><span class="t">Oracle Database 11g</span><span class="s">Tuned Applications Academy</span><span class="d">45-hour training course</span></li>
+          <li><span class="t">Data Analysis with Python</span><span class="s">Coursera, 2024</span></li>
+          <li><span class="t">Project Initiation: Starting a Successful Project</span><span class="s">Coursera, 2024</span></li>
+          <li><span class="t">Foundations of Project Management</span><span class="s">Coursera, 2023</span></li>
+          <li><span class="t">Workshops: DeepSeek, and Notion for organizing life and work</span></li>
+        </ul>
+        <div class="edu">
+          <h3>Education</h3>
+          <p>Bachelor of Business Information Technology, Princess Sumaya University for Technology, 2020 to 2024.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact dark deep">
+    <div class="wrap">
+      <h2>Let's talk about your next workflow.</h2>
+      <a class="mail" href="mailto:zeqlamroaa@gmail.com">zeqlamroaa@gmail.com</a>
+      <div class="reach">
+        <a href="tel:+962798677561">+962 79 867 7561</a>
+        <a href="https://linkedin.com/in/roaa-zeqlam-651844217" target="_blank" rel="noopener">LinkedIn</a>
+        <span>Amman, Jordan</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="dark deep">
+  <div class="wrap"><span>Roaa Zeqlam, Automation Business Analyst, 2026</span><a href="#top">Back to top</a></div>
+</footer>
+
+</body>
+</html>
